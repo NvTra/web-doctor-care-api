@@ -1,0 +1,15 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 13pt;
+}
+.container {
+  margin: 0 auto;
+  padding-top: 20px;
+  line-height: 0.8;
+}
+.align-center {
+  text-align: center;
+}
+.parameter {
+  margin-left: 1.5cm;
+}

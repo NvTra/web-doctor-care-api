@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>thông tin khám chữa bệnh</title>
+    <!--     <link rel="stylesheet" type="text/css" href="/static/css/style.css" th:href="@{/css/style.css}"/>-->
+    <!--     <link rel="stylesheet" th:href="@{style.css}" /> -->
+    <style>
+      * {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 13pt;
+      }
+      .container {
+        margin: 0px auto;
+        padding-top: 20px;
+        line-height: 0.8;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .parameter {
+        margin-left: 1.5cm;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="align-center">Cộng hòa xã hội chủ nghĩa Việt Nam</p>
+      <p class="align-center" style="margin-bottom: 0">
+        Độc lập - Tự do - Hạnh phúc
+      </p>
+      <p class="align-center" style="margin-top: 0px">
+        -------------------------------
+      </p>
+      <hr />
+      <div
+        class="title align-center"
+        style="padding-top: 20px; padding-bottom: 20px"
+      >
+        <b style="text-transform: uppercase">Phiếu thông tin khám chữa bệnh</b>
+      </div>
+      <div class="content">
+        <p class="parameter">
+          Họ và tên: <span th:text="${data.patients.users.name}"></span>
+        </p>
+        <p class="parameter">
+          Giới tính: <span th:text="${data.patients.users.gender}"></span>
+        </p>
+        <p class="parameter">
+          Số điện thoại: <span th:text="${data.patients.users.phone}"></span>
+        </p>
+        <p class="parameter">
+          Địa chỉ: <span th:text="${data.patients.users.address}"></span>
+        </p>
+        <p class="parameter">
+          Bác sĩ khám: <span th:text="${data.doctor.users.name}"></span>
+        </p>
+        <p class="parameter">
+          Lý do khám bệnh: <span th:text="${data.reasonExamination}"></span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
